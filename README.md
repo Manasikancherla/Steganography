@@ -11,3 +11,5 @@ payload).
 3.  After this, each byte of data will be embedded into the LSBs of the cover image.
 
 StegoExtract.c reverses the steps followed in Stego.c
+
+Project guided by Prof. Zorian Duric, George Mason University.
