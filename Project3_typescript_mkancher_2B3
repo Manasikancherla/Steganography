@@ -1,0 +1,163 @@
+Script started on Sun 22 Jul 2018 10:33:09 PM EDT
+[?1034hbash-4.1$ uname -a
+Linux Zeus-2 2.6.32-696.18.7.el6.centos.plus.x86_64 #1 SMP Tue Jan 9 14:11:50 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+bash-4.1$ ls
+cs262.pgm  half.pgm  image.c  image.h  Makefile  Project3_typescript_mkancher_2B3  sample1.txt	sample.txt  Stego.c  StegoExtract.c
+bash-4.1$ make all
+gcc -c -g image.c
+gcc -c -g Stego.c
+gcc -g -o Stego Stego.o image.o 
+gcc -c -g StegoExtract.c -lm
+gcc -g -o StegoExtract StegoExtract.o image.o -lm
+bash-4.1$ Stego
+
+Stego <cover_file> <stego_file> <file_to_hide> 
+bash-4.1$ Stego cs262.pgm cs262stego1.pgm sampe[Kle.txt
+
+Reading input file 'cs262.pgm'
+
+Reading binary file 'sample.txt'
+
+Writing file 'cs262stego1.pgm'
+bash-4.1$ Stego cs262.pgm cs262stego1.pgm sample.txt[1P[1@2[C[C[C[C[C[C[C[C[C[C[C1.txt
+
+Reading input file 'cs262.pgm'
+
+Reading binary file 'sample1.txt'
+
+Writing file 'cs262stego2.pgm'
+bash-4.1$ Stego [KExtract 
+
+StegoExtract <stego_file> <file_to_extract> 
+bash-4.1$ StegoExtract cs262stego1.pgm sampleoutput_cs262stego.txt
+
+Reading input file 'cs262stego1.pgm'
+
+b.size = 875
+
+GNumber is: 01127190
+
+Writing file 'sampleoutput_cs262stego.txt'
+bash-4.1$ StegoExtract cs262stego1.pgm sampleoutput_cs262stego.txt1.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[1P.txt1_cs262stego.txt[C[1P[1@1[1P[1@2
+
+Reading input file 'cs262stego2.pgm'
+
+b.size = 682
+
+GNumber is: 01127190
+
+Writing file 'sampleoutput1_cs262stego.txt'
+bash-4.1$ cat sample.txt
+did u know that a long time ago there once was a young hot wing he was a very nice hot wing except he wanted to he tomato's not just normal tamato's but tomato's from a clowns nose. he had to have the clowns nose's for every meal but they had to be used.this hot wing ended up as a model in the 1780's. he turned out nice and red with hot sauce. one day at a modeling show a guy decided to go up on stage and take a big juicy bite out of the hot wing. the hot wing cried and cried for a million years because he could no longer be a model. after he cried forever he was very moldy so he started to cry again. after that the little moldy parts came of of him and became SERGEANTS they stictiched up the hotwings whole. by now the young hot wing is a very old BUT HE STILL COMPLETED HIS MODELING CAREER. after the SERGEANT'S fixed up the hot wing they got a hotdog and ate it.
+bash-4.1$ cat sampleoutput_cs262stego.txt 
+did u know that a long time ago there once was a young hot wing he was a very nice hot wing except he wanted to he tomato's not just normal tamato's but tomato's from a clowns nose. he had to have the clowns nose's for every meal but they had to be used.this hot wing ended up as a model in the 1780's. he turned out nice and red with hot sauce. one day at a modeling show a guy decided to go up on stage and take a big juicy bite out of the hot wing. the hot wing cried and cried for a million years because he could no longer be a model. after he cried forever he was very moldy so he started to cry again. after that the little moldy parts came of of him and became SERGEANTS they stictiched up the hotwings whole. by now the young hot wing is a very old BUT HE STILL COMPLETED HIS MODELING CAREER. after the SERGEANT'S fixed up the hot wing they got a hotdog and ate it.
+bash-4.1$ cat samplek[K1.txt 
+TO BE OR NOT TO BE
+
+"To be or not to be? That is the question—
+Whether ’tis nobler in the mind to suffer
+The slings and arrows of outrageous fortune,
+Or to take arms against a sea of troubles,
+And, by opposing, end them? To die, to sleep—
+No more—and by a sleep to say we end
+The heartache and the thousand natural shocks
+That flesh is heir to—’tis a consummation
+Devoutly to be wished! To die, to sleep.
+To sleep, perchance to dream—ay, there’s the rub,
+For in that sleep of death what dreams may come
+When we have shuffled off this mortal coil,
+Must give us pause. There’s the respect
+That makes calamity of so long life."
+
+				- Hamlet
+				 William Shakespeare
+bash-4.1$ cat cs262[K[K[K[K[Ksampleoutput1_cs262stego.txt 
+TO BE OR NOT TO BE
+
+"To be or not to be? That is the question—
+Whether ’tis nobler in the mind to suffer
+The slings and arrows of outrageous fortune,
+Or to take arms against a sea of troubles,
+And, by opposing, end them? To die, to sleep—
+No more—and by a sleep to say we end
+The heartache and the thousand natural shocks
+That flesh is heir to—’tis a consummation
+Devoutly to be wished! To die, to sleep.
+To sleep, perchance to dream—ay, there’s the rub,
+For in that sleep of death what dreams may come
+When we have shuffled off this mortal coil,
+Must give us pause. There’s the respect
+That makes calamity of so long life."
+
+				- Hamlet
+				 William Shakespeare
+bash-4.1$ cat sampleoutput1_cs262stego.txt [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1.txt [K[16@output_cs262stego[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.txt[K[C[C[C[C[C[C[C[C[C[CStegoExtract cs262stego2.pgm sampleoutput1_cs262stego.txt[1P1.pgm sampleoutput_cs262stego.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K cs262.pgm cs262stego2.pgm sample1.txt[1P1.pgm sample.txt[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@h[1@a[1@l[5@f.pgm[C[C[C[C[C[C[1P[1P[1P[1P[1P[1@h[1@a[1@l[1@f[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+Reading input file 'half.pgm'
+
+Reading binary file 'sample.txt'
+
+Writing file 'halfstego1.pgm'
+bash-4.1$ Stego half.pgm halfstego1.pgm sample.txt[C[C[C[C[C[C[C[C[C[C[7Pcat sampleoutput1_cs262stego.txt [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1.txt [K[17@output1_cs262stego[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CStego half.pgm halfstego1.pgm sample.txt[1P[1@2[C[C[C[C[C[C[C[C[C[C[C1.txt
+
+Reading input file 'half.pgm'
+
+Reading binary file 'sample1.txt'
+
+Writing file 'halfstego2.pgm'
+bash-4.1$ Stego half.pgm halfstego2.pgm sample1.txt[1P1.pgm sample.txt[C[C[C[C[C[C[C[C[C[C[7Pcat sampleoutput1_cs262stego.txt [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1.txt [K[16@output_cs262stego[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.txt[K[C[C[C[C[C[C[C[C[C[CStegoExtract cs262stego2.pgm sampleoutput1_cs262stego.txt[1P1.pgm sampleoutput_cs262stego.txt[1P[1P[1P[1P[1P[1@h[1@a[1@l[1@f[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P.txt[1P.txt[1P.txt[1P.txt[1P.txt[1P.txt[1P.txt[1P.txt[1P.txt[1P.txth.txta.txtl.txtf.txts.txtt.txte.txtg.txto.txt
+
+Reading input file 'halfstego1.pgm'
+
+b.size = 875
+
+GNumber is: 01127190
+
+Writing file 'sampleoutput_halfstego.txt'
+bash-4.1$ StegoExtract halfstego1.pgm sampleoutput_halfstego.txt[1P[1@2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1_halfstego.txt
+
+Reading input file 'halfstego2.pgm'
+
+b.size = 682
+
+GNumber is: 01127190
+
+Writing file 'sampleoutput1_halfstego.txt'
+c bash-4.1$ cat sa[K[Ks[K[K[K[K[Kcat sampleoutput_halfstego.txt 
+did u know that a long time ago there once was a young hot wing he was a very nice hot wing except he wanted to he tomato's not just normal tamato's but tomato's from a clowns nose. he had to have the clowns nose's for every meal but they had to be used.this hot wing ended up as a model in the 1780's. he turned out nice and red with hot sauce. one day at a modeling show a guy decided to go up on stage and take a big juicy bite out of the hot wing. the hot wing cried and cried for a million years because he could no longer be a model. after he cried forever he was very moldy so he started to cry again. after that the little moldy parts came of of him and became SERGEANTS they stictiched up the hotwings whole. by now the young hot wing is a very old BUT HE STILL COMPLETED HIS MODELING CAREER. after the SERGEANT'S fixed up the hot wing they got a hotdog and ate it.
+bash-4.1$ cat sampleoutput_halfstego.txt [C[1@1
+TO BE OR NOT TO BE
+
+"To be or not to be? That is the question—
+Whether ’tis nobler in the mind to suffer
+The slings and arrows of outrageous fortune,
+Or to take arms against a sea of troubles,
+And, by opposing, end them? To die, to sleep—
+No more—and by a sleep to say we end
+The heartache and the thousand natural shocks
+That flesh is heir to—’tis a consummation
+Devoutly to be wished! To die, to sleep.
+To sleep, perchance to dream—ay, there’s the rub,
+For in that sleep of death what dreams may come
+When we have shuffled off this mortal coil,
+Must give us pause. There’s the respect
+That makes calamity of so long life."
+
+				- Hamlet
+				 William Shakespeare
+bash-4.1$ 
+bash-4.1$ ls
+cs262.pgm	 half.pgm	 image.c  Makefile			    sampleoutput1_cs262stego.txt  sampleoutput_halfstego.txt  Stego.c	      StegoExtract.o
+cs262stego1.pgm  halfstego1.pgm  image.h  Project3_typescript_mkancher_2B3  sampleoutput1_halfstego.txt   sample.txt		      StegoExtract    Stego.o
+cs262stego2.pgm  halfstego2.pgm  image.o  sample1.txt			    sampleoutput_cs262stego.txt   Stego			      StegoExtract.c
+bash-4.1$ make cleanall
+rm -f *.o
+rm -f Stego
+rm -f StegoExtract
+rm -f sampleoutput*.txt
+bash-4.1$ ls
+cs262.pgm	 cs262stego2.pgm  halfstego1.pgm  image.c  Makefile			     sample1.txt  Stego.c
+cs262stego1.pgm  half.pgm	  halfstego2.pgm  image.h  Project3_typescript_mkancher_2B3  sample.txt   StegoExtract.c
+bash-4.1$ logo[K[K[K[Kexit
+
+Script done on Sun 22 Jul 2018 10:42:07 PM EDT
